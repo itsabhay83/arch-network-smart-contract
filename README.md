@@ -8,6 +8,7 @@ The Arch Network Smart Contract System is a Rust-based implementation designed t
 
 - [Features](#features)
 - [Architecture](#architecture)
+- [Import Structure](#import-structure)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contract Lifecycle](#contract-lifecycle)
@@ -46,6 +47,39 @@ The contract integrates with the Arch Program framework, utilizing:
 - **ProgramError**: For error handling
 - **Transaction**: For Bitcoin transaction creation
 - **Borsh Serialization**: For data serialization/deserialization
+
+## Import Structure
+
+The contract uses the following import structure to integrate with the Arch Network framework:
+
+```rust
+use arch_program::{
+    account::AccountInfo,
+    bitcoin::{self, absolute::LockTime, transaction::Version, Transaction},
+    entrypoint,
+    helper::add_state_transition,
+    input_to_sign::InputToSign,
+    msg,
+    program::{
+        get_account_script_pubkey, get_bitcoin_block_height, next_account_info,
+        set_transaction_to_sign,
+    },
+    program_error::ProgramError,
+    pubkey::Pubkey,
+    transaction_to_sign::TransactionToSign,
+};
+use borsh::{BorshDeserialize, BorshSerialize};
+```
+
+This structure shows the exact dependencies required for the contract to function properly within the Arch Network ecosystem. The contract relies on:
+
+1. **Account Management**: `AccountInfo` for handling account data
+2. **Bitcoin Integration**: `LockTime`, `Version`, and `Transaction` for Bitcoin transaction creation
+3. **Program Flow**: `entrypoint` and `add_state_transition` for program execution
+4. **Transaction Signing**: `InputToSign` and `TransactionToSign` for preparing transactions
+5. **Utility Functions**: Various helper functions for Bitcoin operations
+6. **Error Handling**: `ProgramError` for standardized error management
+7. **Serialization**: `BorshDeserialize` and `BorshSerialize` for data encoding/decoding
 
 ## Installation
 
