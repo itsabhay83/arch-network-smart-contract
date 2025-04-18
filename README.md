@@ -221,16 +221,20 @@ cargo test test_initialize_pool
 # Run tests with output
 cargo test -- --nocapture
 ```
+## 🧪 Test Coverage
 
-### Test Coverage
+![Test Coverage](https://media-hosting.imagekit.io/712186d02ea148be/Screenshot%202025-04-17%20223740.png?Expires=1839569983&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TRyK-W7RHCMk7HcZyDypB7BuB0BTr5HUsHDY16lYuJa7CpacALXxPBt~Gkye0P87P2KKsALKYXCFYdye5FDmZKLtBQrMgmooBitWyFJ-7A8lBigper48mc~hpK7IF-mYEp7HSLc8VkrZNN5KOJY9XJgsP~KUpr~9yjO42Djm3I3j7i~Q53xvwEkWVRDDhXfEpOyIZfACIgwbLWy2lq6UVSAhqrYsuUt8-mJoyM6-LrIVsP0NCaLHRGiaNsiE7zXfosAdBQUVitoIgdzNAFcdQriFQaNQt-fyzhofUCDelnivPCbhcop640GAaE53-4mW~9amxyVFPxhNtEtM7yPdoA__)
 
-- Pool initialization
-- Contribution validation
-- Proposal submission
-- Voting mechanism
-- Transfer execution
-- Emergency withdrawal
+The smart contract was tested for:
+
+- Pool initialization  
+- Contribution validation  
+- Proposal submission  
+- Voting mechanism  
+- Transfer execution  
+- Emergency withdrawal  
 - Error handling
+
 
 ## Security Considerations
 
